@@ -1,3 +1,4 @@
+// Toolstack.js (No changes needed here, CSS will handle visuals)
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -6,7 +7,7 @@ import {
   SiSlack,
   SiVercel,
   SiMacos,
-  SiGithub,
+  SiGithub, // Re-added SiGithub for consistency (if you want to list it as a tool)
   SiFigma,
   SiNetlify,
   SiWindows,
@@ -15,37 +16,32 @@ import {
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {/* Your commonly used tools */}
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode /> {/* VS Code */}
+        <SiVisualstudiocode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman /> {/* Postman */}
+        <SiPostman />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGithub /> {/* GitHub */}
-      </Col>
-
-      {/* Optional tools, keep/remove as per your workflow */}
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSlack /> {/* Slack - Communication */}
+        <SiGithub /> {/* GitHub as a tool */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFigma /> {/* Figma - Design tool */}
+        <SiSlack />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel /> {/* Vercel - Hosting */}
+        <SiFigma />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNetlify /> {/* Netlify - Hosting */}
-      </Col>
-
-      {/* Your OS platform */}
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMacos /> {/* MacOS */}
+        <SiVercel />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiWindows /> {/* Windows */}
+        <SiNetlify />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMacos />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiWindows />
       </Col>
     </Row>
   );

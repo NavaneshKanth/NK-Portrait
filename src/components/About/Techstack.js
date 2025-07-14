@@ -1,3 +1,4 @@
+// Techstack.js (No changes needed here, CSS will handle visuals)
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {

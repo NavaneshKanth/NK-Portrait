@@ -1,3 +1,4 @@
+/* General App-wide styles (often in App.css) */
 .App {
   text-align: center;
 }
@@ -24,6 +25,25 @@
   color: white;
 }
 
+/* Specific styles for Carousel (if you have one) */
+.carousel-item img {
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* General utility classes */
+.text-purple {
+  color: #6c63ff;
+  /* This seems to be a different purple than your primary theme. Consider unifying. */
+}
+
+/* Card hover effect (might be for ProjectCards or other general cards) */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -32,7 +52,1046 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* --- Styles specifically for Home2 component (originally from Home2.css) --- */
+
+.home-about-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: linear-gradient(180deg,
+      #1d0e2e 0%,
+      /* Darker top */
+      #130a1c 100%
+      /* Slightly lighter bottom to blend with Particle */
+    );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-about-description {
+  color: white;
+  padding-right: 25px;
+  /* Add some space from the avatar */
+  margin-bottom: 40px;
+}
+
+.about-heading {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #c074f5;
+  /* Your existing primary purple */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  /* Subtle shadow for depth */
+}
+
+.home-about-body {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+.home-about-body b.purple {
+  color: #d197ff;
+  /* A slightly different purple for bold text */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.myAvtar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: floatImage 3s ease-in-out infinite;
+  /* Floating animation */
+}
+
+/* Avatar tilt effect specific styling */
+.avatar-tilt-effect {
+  border-radius: 50%;
+  /* Make it round if desired */
+  overflow: hidden;
+  /* Ensures image stays within bounds if rounded */
+  box-shadow: 0 0 20px rgba(192, 116, 245, 0.5),
+    /* Glow effect */
+    0 0 40px rgba(192, 116, 245, 0.3);
+  transition: all 0.3s ease;
+  width: 280px;
+  /* Adjust size */
+  height: 280px;
+  /* Adjust size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures image covers the area without distortion */
+  border-radius: 50%;
+  /* If you want the image itself to be round */
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.home-about-social {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.social-heading {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #c074f5;
+  margin-bottom: 15px;
+}
+
+.social-connect-text {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.home-about-social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* Space between icons */
+}
+
+.social-icons a {
+  color: #c074f5 !important;
+  font-size: 2.2em;
+  /* Slightly larger icons */
+  width: 50px;
+  /* Explicit width to define the circle size */
+  height: 50px;
+  /* Explicit height to define the circle size */
+  border-radius: 50%;
+  background-color: rgba(192, 116, 245, 0.1);
+  /* Subtle background */
+  display: flex;
+  /* Use flexbox for perfect centering */
+  align-items: center;
+  /* Vertically center content */
+  justify-content: center;
+  /* Horizontally center content */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(192, 116, 245, 0.2);
+  /* Initial subtle shadow */
+  text-decoration: none;
+  /* Ensure no underline */
+}
+
+.social-icons a:hover {
+  transform: translateY(-8px);
+  /* Lift effect on hover */
+  background-color: #c074f5;
+  /* Solid color on hover */
+  color: #1a0827 !important;
+  /* Darker text on hover */
+  box-shadow: 0 0 20px rgba(192, 116, 245, 0.6);
+  /* Stronger glow on hover */
+}
+
+/* Responsive Adjustments for Home2 */
+@media (max-width: 767px) {
+  .home-about-description {
+    text-align: center;
+    padding-right: 0;
+    order: 2;
+    /* Put text below avatar on small screens */
+  }
+
+  .myAvtar {
+    order: 1;
+    /* Put avatar above text on small screens */
+    margin-bottom: 30px;
+    /* Space between avatar and text */
+    padding: 0;
+    /* Remove extra padding on small screens */
+  }
+
+  .about-heading {
+    font-size: 2.2em;
+  }
+
+  .home-about-body {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .social-heading {
+    font-size: 1.8em;
+  }
+
+  .social-icons a {
+    font-size: 1.8em;
+    /* Adjust icon size for mobile */
+    width: 45px;
+    /* Adjust circle size for mobile */
+    height: 45px;
+    /* Adjust circle size for mobile */
+  }
+
+  .home-about-social-links {
+    gap: 20px;
+    /* Adjust gap for mobile */
+  }
+}
+
+/* --- Project Detail Page Specific Styles (from ProjectDetail.css - if you're consolidating) --- */
+
+.project-detail-section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #1a0827;
+  /* Or whatever your theme background is */
+  color: white;
+  min-height: 100vh;
+  /* Ensure it takes full height */
+}
+
+.project-detail-heading {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #c074f5;
+  /* Your purple color */
+}
+
+.project-detail-tagline {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #a0a0a0;
+}
+
+.section-heading {
+  font-size: 2em;
+  font-weight: 600;
+  color: #e0b0ff;
+  /* A lighter purple or highlight color */
+  margin-bottom: 25px;
+  border-bottom: 2px solid #5a2c8a;
+  /* Subtle separator */
+  padding-bottom: 10px;
+}
+
+.project-detail-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.tech-badge {
+  background-color: #200933;
+  /* Darker purple for badges */
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  /* Allows wrapping */
+  border: 1px solid #c074f5;
+  font-size: 0.9em;
+  white-space: nowrap;
+  /* Prevent breaking inside badge */
+}
+
+.detail-image-gallery img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.detail-image-gallery img:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments for ProjectDetail page */
+@media (max-width: 768px) {
+  .project-detail-heading {
+    font-size: 2em;
+  }
+
+  .section-heading {
+    font-size: 1.6em;
+  }
+
+  .project-detail-tagline {
+    font-size: 1em;
+  }
+}
+
+/* --- About Section Specific Styles --- */
+
+.about-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: linear-gradient(180deg,
+      #1a0827 0%,
+      /* Darker background, slightly different from home for subtle variation */
+      #13061d 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* To center content vertically */
+  justify-content: center;
+  /* To center content vertically */
+}
+
+.about-main-heading {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #c074f5;
+  /* Your primary purple */
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* AboutCard styling */
+.quote-card-view {
+  border: none;
+  background-color: rgba(26, 8, 39, 0.7) !important;
+  /* Semi-transparent dark background */
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(192, 116, 245, 0.1);
+  /* Deeper shadow with inner glow */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: justify;
+}
+
+.quote-card-view .blockquote-footer {
+  color: rgb(180, 150, 200) !important;
+  /* Lighter color for footer */
+  margin-top: 20px;
+}
+
+.about-activity-list {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.about-activity-item {
+  display: flex;
+  align-items: flex-start;
+  /* Align icon and text at the top */
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #e0e0e0;
+}
+
+.about-activity-item .purple-icon {
+  color: #c074f5;
+  /* Make the ImPointRight icon purple */
+  font-size: 1.2em;
+  margin-right: 10px;
+  /* Space between icon and text */
+  flex-shrink: 0;
+  /* Prevent icon from shrinking */
+}
+
+/* About Image */
+.about-img {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-laptop-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  animation: floatImage 3s ease-in-out infinite;
+  /* Reuse float animation for image */
+}
+
+/* Headings for Skillset and Tools */
+.skillset-heading,
+.tools-heading {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: #c074f5;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Techstack and Toolstack Icons */
+.tech-icons {
+  font-size: 4.5em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.9;
+  border: 1.8px solid rgba(192, 116, 245, 0.6);
+  /* Purple border */
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out !important;
+  background-color: rgba(26, 8, 39, 0.4);
+  /* Dark semi-transparent background */
+  color: #d197ff;
+  /* Icon color */
+  cursor: pointer;
+}
+
+.tech-icons:hover {
+  transform: scale(1.1);
+  /* Zoom in effect */
+  background-color: #c074f5 !important;
+  /* Solid purple background on hover */
+  color: #1a0827 !important;
+  /* Dark text on hover */
+  border: 1.8px solid #c074f5 !important;
+  /* Solid purple border on hover */
+  box-shadow: 0 0 20px rgba(192, 116, 245, 0.8), inset 0 0 10px rgba(192, 116, 245, 0.5);
+  /* Stronger glow */
+}
+
+/* Github Calendar Styling (refer to react-github-calendar docs for more customization) */
+/* This section provides basic container styling for the calendar */
+.react-activity-calendar {
+  width: 100%;
+  overflow-x: auto;
+  /* Enable horizontal scroll on small screens */
+  padding: 20px;
+  background-color: rgba(26, 8, 39, 0.7);
+  /* Match card background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  /* Space from tools section */
+  margin-bottom: 50px;
+  /* Space at the bottom */
+}
+
+
+/* Responsive adjustments for About Section */
+@media (max-width: 767px) {
+
+  .about-main-heading,
+  .skillset-heading,
+  .tools-heading {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .about-img {
+    order: 1;
+    /* Image above text on mobile */
+    padding-top: 30px !important;
+  }
+
+  .quote-card-view {
+    padding: 20px;
+    margin-top: 30px;
+    /* Add space between image and card */
+    order: 2;
+    /* Text below image on mobile */
+  }
+
+  .home-about-body {
+    font-size: 1em;
+  }
+
+  .about-activity-item {
+    font-size: 0.95em;
+  }
+
+  .tech-icons {
+    font-size: 3.5em !important;
+    /* Smaller icons on mobile */
+    margin: 8px !important;
+    padding: 8px !important;
+  }
+
+  .react-activity-calendar {
+    padding: 10px;
+    margin-top: 30px;
+  }
+}
+
+/* --- Projects Section Specific Styles --- */
+
+.project-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: linear-gradient(180deg,
+      #130a1c 0%,
+      /* Darker top, matching the Home section background */
+      #1a0827 100%
+      /* Slightly lighter bottom for depth */
+    );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-heading {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #c074f5;
+  /* Primary purple */
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.project-subheading {
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 50px;
+  max-width: 800px;
+  /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card-col {
+  padding: 20px;
+  /* Spacing between cards */
+}
+
+.project-card-view {
+  background-color: #200d30 !important;
+  /* Darker card background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(192, 116, 245, 0.05);
+  /* Deeper shadow with subtle inner glow */
+  border-radius: 10px !important;
+  color: white !important;
+  transition: all 0.3s ease-in-out !important;
+  overflow: hidden;
+  /* Ensures image and overlay stay within bounds */
+  height: 100%;
+  /* Make cards same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-view:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* Lift and slight scale on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(192, 116, 245, 0.2);
+  /* Stronger shadow/glow */
+}
+
+/* Project Image Container with Overlay */
+.project-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio (height / width * 100%) */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(192, 116, 245, 0.3);
+  /* Subtle separator */
+}
+
+.project-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Cover the container */
+  transition: transform 0.4s ease;
+  filter: brightness(0.8) grayscale(0.2);
+  /* Slightly muted, will brighten on hover */
+}
+
+.project-card-view:hover .project-main-image {
+  transform: scale(1.05);
+  /* Slight zoom on image hover */
+  filter: brightness(1) grayscale(0);
+  /* Full brightness and color on hover */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card-view:hover .image-overlay {
+  opacity: 1;
+  /* Show overlay on card hover */
+}
+
+.overlay-button {
+  background-color: #c074f5 !important;
+  border-color: #c074f5 !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  /* Hidden by default */
+  transform: translateY(20px);
+  /* Start slightly below */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card-view:hover .overlay-button {
+  opacity: 1;
+  transform: translateY(0);
+  /* Slide up into view */
+  transition-delay: 0.1s;
+  /* Slight delay after overlay appears */
+}
+
+.project-card-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #d197ff;
+  /* Lighter purple for titles */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-card-description {
+  font-size: 0.95em;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  /* Allows text to take available space */
+}
+
+/* Tech stack badges on the card */
+.tech-stack-badges {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tech-badge-card {
+  background-color: rgba(192, 116, 245, 0.2);
+  /* Semi-transparent purple */
+  color: #d197ff;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border: 1px solid rgba(192, 116, 245, 0.4);
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* Space between buttons */
+  margin-top: auto;
+  /* Push buttons to the bottom of the card body */
+}
+
+.project-btn {
+  background-color: #3b205a !important;
+  /* Darker button background */
+  border: 1px solid #c074f5 !important;
+  color: white !important;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out !important;
+  padding: 8px 18px;
+  font-size: 0.9em;
+  border-radius: 5px;
+}
+
+.project-btn:hover {
+  background-color: #c074f5 !important;
+  color: #1a0827 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(192, 116, 245, 0.4);
+}
+
+/* Project Modal Styling */
+.project-modal .modal-content {
+  background-color: #1a0827;
+  /* Dark background for modal */
+  color: white;
+  border-radius: 15px;
+  border: 1px solid #c074f5;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+}
+
+.project-modal .modal-header-custom {
+  border-bottom: 1px solid #3b205a;
+  padding: 20px 25px;
+}
+
+.project-modal .modal-title-custom {
+  color: #d197ff;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.project-modal .btn-close {
+  filter: invert(1);
+  /* Makes the close button white */
+}
+
+.project-modal .modal-body-custom {
+  padding: 25px;
+}
+
+.project-carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.project-carousel-img {
+  max-height: 450px;
+  /* Limit max height of carousel images */
+  object-fit: contain;
+  /* Ensure image fits without cropping too much */
+  background-color: #0d0611;
+  /* Dark background for image area if image doesn't fill */
+}
+
+.modal-section-title {
+  color: #c074f5;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.modal-description-paragraph {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+/* Tech stack badges inside modal */
+.tech-stack-badges-modal {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow badges to wrap */
+  gap: 8px;
+  /* Space between badges */
+  margin-top: 15px;
+}
+
+.tech-badge-modal {
+  background-color: #3b205a;
+  /* Darker purple for modal badges */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  /* More rounded pill shape */
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid #c074f5;
+  white-space: nowrap;
+  /* Prevent breaking inside badge */
+}
+
+.modal-note-text {
+  color: #ffda6a !important;
+  /* Yellowish for notes */
+  margin-top: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  padding: 10px;
+  border-left: 3px solid #ffda6a;
+  /* Highlight with a left border */
+  background-color: rgba(255, 218, 106, 0.05);
+  /* Very subtle background */
+  border-radius: 5px;
+}
+
+.project-modal .modal-footer-custom {
+  border-top: 1px solid #3b205a;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: flex-end;
+  /* Align buttons to the right */
+  gap: 10px;
+  /* Space between buttons */
+}
+
+.project-modal-btn {
+  background-color: #3b205a !important;
+  border: 1px solid #c074f5 !important;
+  color: white !important;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out !important;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  border-radius: 5px;
+}
+
+.project-modal-btn:hover {
+  background-color: #c074f5 !important;
+  color: #1a0827 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(192, 116, 245, 0.4);
+}
+
+
+/* Responsive Adjustments for Projects Section */
+@media (max-width: 991px) {
+  .project-card-col {
+    margin-bottom: 20px;
+    /* Add space between cards when they stack */
+  }
+}
+
+@media (max-width: 767px) {
+  .project-heading {
+    font-size: 2.2em;
+  }
+
+  .project-subheading {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+
+  .project-card-title {
+    font-size: 1.3em;
+  }
+
+  .project-card-description {
+    font-size: 0.9em;
+  }
+
+  .project-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+
+  .modal-title-custom {
+    font-size: 1.5em;
+  }
+
+  .project-carousel-img {
+    max-height: 300px;
+    /* Smaller carousel images on mobile */
+  }
+
+  .modal-section-title {
+    font-size: 1.2em;
+  }
+
+  .modal-description-paragraph,
+  .tech-badge-modal,
+  .modal-note-text {
+    font-size: 0.9em;
+  }
+
+  .project-modal-btn {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}
+
+/* --- Resume Section Specific Styles --- */
+
+.resume-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: linear-gradient(
+    180deg,
+    #1d0e2e 0%, /* Matching the darker top of Home section */
+    #130a1c 100% /* Blending with Particle background */
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Allows content to stack vertically */
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+}
+
+.resume-download-btn-container {
+  margin-top: 30px; /* Space from top or previous section */
+  margin-bottom: 30px; /* Space before PDF viewer */
+  text-align: center; /* Ensure button is centered in row */
+}
+
+.resume-download-button {
+  background-color: #c074f5 !important; /* Your primary purple */
+  border-color: #c074f5 !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.resume-download-button:hover {
+  background-color: #d197ff !important; /* Lighter purple on hover */
+  border-color: #d197ff !important;
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.resume-view-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px; /* Space after PDF viewer */
+  width: 100%; /* Take full width */
+}
+
+.resume-pdf-viewer {
+  background-color: rgba(255, 255, 255, 0.05); /* Very subtle transparent white background for the PDF area */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+  overflow: hidden; /* Ensures PDF content stays within rounded corners */
+  padding: 20px; /* Padding around the PDF itself */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* For loading message positioning */
+}
+
+/* react-pdf styles adjustments */
+.react-pdf__Document {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.react-pdf__Page {
+  margin-bottom: 20px; /* Space between pages if multi-page */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Shadow for individual page */
+  border: 1px solid rgba(192, 116, 245, 0.1); /* Subtle border */
+  border-radius: 5px; /* Slightly rounded corners for pages */
+  overflow: hidden; /* Ensures page content is clipped */
+}
+
+.react-pdf__Page canvas {
+  max-width: 100%; /* Ensure PDF scales down on smaller screens */
+  height: auto !important; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below canvas */
+}
+
+.react-pdf__Page__annotations,
+.react-pdf__Page__text {
+  /* Ensure these layers are visible and correctly positioned */
+  z-index: 2; /* Place above the canvas */
+}
+
+.resume-loading,
+.resume-error {
+  color: #e0e0e0;
+  font-size: 1.2em;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Pagination styles */
+.resume-pagination-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.resume-pagination-container .page-info {
+  color: #e0e0e0;
+  font-size: 1.1em;
+  margin: 0 15px;
+  align-self: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 767px) {
+  .resume-section {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .resume-download-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .resume-pdf-viewer {
+    padding: 10px; /* Less padding on small screens */
+  }
+
+  .react-pdf__Page {
+    margin-bottom: 15px;
+  }
+
+  .resume-loading,
+  .resume-error {
+    font-size: 1em;
+    padding: 30px 15px;
+  }
+
+  .resume-pagination-container .page-info {
+    font-size: 0.9em;
+    margin: 0 10px;
+  }
+
+  .resume-pagination-container .btn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .resume-pdf-viewer {
+    padding: 15px;
   }
 }

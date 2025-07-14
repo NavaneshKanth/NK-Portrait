@@ -25,7 +25,7 @@ function Footer() {
               <a
                 href="https://github.com/navaneshkanth"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
@@ -35,7 +35,7 @@ function Footer() {
               <a
                 href="https://x.com/Navanesh_kanth?s=09"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiOutlineTwitter />
@@ -43,9 +43,9 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/navanesh-kanth-821895189/"
+                href="https://www.linkedin.com/in/navaneshkanth/"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
@@ -55,7 +55,7 @@ function Footer() {
               <a
                 href="https://www.instagram.com/navanesh_kanth?igsh=MXIwbTJuY2VlYXcwZg=="
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />

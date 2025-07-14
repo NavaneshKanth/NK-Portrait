@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "title": "EDI Custom Clearance Import System",
+    "shortDescription": "A full-stack web app to streamline import job processing, documentation, and invoice tracking for a logistics client.",
+    "fullDescription": "This is a client-specific EDI Custom Clearance Import Management System developed for NG Pillai Logistics. The application handles end-to-end import job workflows including job creation, filtering, search, and invoicing. Key modules include:\n\n- **Login & Auth**: Secure login with client-controlled credentials.\n- **Job Querying**: Powerful search with filters like HAWB/MAWB number, invoice, container, transport mode (air, sea, land), and date ranges.\n- **Job Creation**: Comprehensive input forms with fields for importer details, origin, BOE type, IGM info, custom house codes, and more.\n- **Invoice Workflow**: Generates invoices with structured sections including supplier details, third-party charges, transaction summaries, item lists, duties (IGST, CESS), and other import-related charges.\n\nThe system is built to reduce manual documentation, prevent errors, and streamline clearance processes.",
+    "techStack": "React.js, Bootstrap, Spring Boot, MySQL",
+    "ghLink": "",
+    "demoLink": "http://65.0.1.125:8080/ngpillai_import/#/login",
+    "images": [
+      "/assets/projects_Images/import/1.png",
+      "/assets/projects_Images/import/2.png",
+      "/assets/projects_Images/import/3.png",
+      "/assets/projects_Images/import/4.png",
+      "/assets/projects_Images/import/5.png"
+    ],
+    "note": "Private client project. GitHub repository not shared due to NDA and confidentiality policies."
+  },
+  {
+    "id": 2,
+    "title": "ERP System – Import & Logistics Management",
+    "shortDescription": "Client-specific ERP for inventory, approvals, and end-to-end logistics operations.",
+    "fullDescription": "This enterprise ERP solution was developed for NG Pillai to handle operations in their import and logistics workflow. The system features a dashboard, master data configurations, and an approval workflow with multiple checkpoints. Key modules include:\n\n- **Dashboard**: Overview of job, invoice, and approval status post-login.\n- **Master Data**: Management for currencies, countries, and other static datasets.\n- **Checklist Workflow**: Creation, approval by managers, and verification by external parties.\n- **BE/SB Updation**: Integration with customs data for Bill of Entry or Shipping Bill.\n- **Tracking & Audit**: Internal tracking for each job.\n- **Fund Request**: Structured module for requesting and managing funds within the job process.\n\nThis app is used internally by the client and cannot be publicly shared. Only screenshots are provided for demo purposes.",
+    "techStack": "React.js, Bootstrap, Spring Boot, MySQL",
+    "ghLink": "",
+    "demoLink": "http://35.154.221.117:8081/ngp_erp/",
+    "images": [
+      "/assets/projects_Images/erp/1.png",
+      "/assets/projects_Images/erp/2.png",
+      "/assets/projects_Images/erp/3.png"
+    ],
+    "note": "Private client project for NG Pillai. GitHub repository not shared due to NDA and internal use."
+  },
+  {
+    "id": 3,
+    "title": "Supermarket Billing & CRM System",
+    "shortDescription": "A role-based supermarket billing and CRM web app with GST-enabled invoicing.",
+    "fullDescription": "This is a full-featured supermarket billing system developed as a standalone web app using Tomcat for local deployment. It includes a built-in CRM to manage staff and customers efficiently. The system allows real-time stock tracking, bill generation, and administrative control over daily transactions.\n\nKey Modules:\n\n- **CRM Dashboard**: Track business operations with customer insights, staff stats, and stock analytics.\n- **Customer & Staff Management**: Add, update, and manage user roles with permission-based access.\n- **Billing System**: Create and edit GST-compliant bills with dynamic product selection and quantity updates.\n- **Stock Control**: Monitor stock in/out flows, low stock alerts, and inventory balance.\n\nThe app runs on a local server and is optimized for individual shop owners needing centralized billing and customer tracking.",
+    "techStack": "React.js, Tailwind CSS, Express.js, Tomcat",
+    "ghLink": "",
+    "demoLink": "",
+    "images": [
+      "/assets/projects_Images/BillingSoftware/1.png",
+      "/assets/projects_Images/BillingSoftware/2.png"
+    ],
+    "note": "Client-deployed locally on Tomcat. GitHub repository not shared due to freelance restrictions."
+  },
+  {
+    "id": 4,
+    "title": "Blood Bank Web App",
+    "shortDescription": "Blood donor registry and search portal with login and profile management.",
+    "fullDescription": "This is a full-stack web application built to connect blood donors with seekers. The platform allows users to register as blood donors by providing their blood group, contact information, and location details. Once registered, users can log in to update their profiles.\n\nOn the home page, seekers can search for donors using filters like blood group, district, and state. The search results display a list of matching donors with their phone numbers, making it easy to get in touch directly for urgent needs.\n\nKey Features:\n\n- **Donor Registration**: Sign up with blood type, district, and contact details.\n- **Login & Profile Edit**: Donors can log in and update or manage their profile info.\n- **Search Functionality**: Users can search for available donors by location and blood type.\n- **Real-time Listing**: Matching donors appear immediately with name and phone contact for fast access.",
+    "techStack": "React.js, Tailwind CSS, Node.js, MongoDB",
+    "ghLink": "",
+    "demoLink": "",
+    "images": [
+      "/assets/projects_Images/bloodbank/1.png",
+      "/assets/projects_Images/bloodbank/2.png",
+      "/assets/projects_Images/bloodbank/3.png"
+    ],
+    "note": "Freelance project for public service. GitHub repository is private."
+  },
+  {
+    "id": 5,
+    "title": "Revive Musical – Billing & Repair Management Web App",
+    "shortDescription": "Custom billing software for a musical instruments repair shop.",
+    "fullDescription": "This web application was built for a local musical instruments repair shop to manage repair jobs, generate bills, and maintain customer records. The platform allows the shop owner to create, update, and view billing entries based on instrument types and service details. Invoices are automatically generated with customer information and itemized charges.",
+    "techStack": "React.js, Spring Boot, MySQL",
+    "ghLink": "",
+    "demoLink": "",
+    "images": [
+      "/assets/projects_Images/revive/1.png",
+      "/assets/projects_Images/revive/2.png"
+    ],
+    "note": "Freelance project. GitHub repo is private at the client's request."
+  },
+  {
+    "id": 6,
+    "title": "Asir Matrimony",
+    "shortDescription": "Matrimony web platform built for Tamil Nadu users with login-protected profiles.",
+    "fullDescription": "Asir Matrimony is a regional matchmaking platform created for users in Tamil Nadu. It allows users to register, create detailed profiles, log in securely, and update their details. The entire frontend and backend were planned and developed by me, integrating React for the UI and Express.js for API handling. Authentication and profile protection ensure a secure user experience.",
+    "techStack": "React.js, Bootstrap, Express.js, MongoDB",
+    "ghLink": "",
+    "demoLink": "",
+    "images": [
+      "/assets/projects_Images/matrimony/1.png",
+      "/assets/projects_Images/matrimony/2.png",
+      "/assets/projects_Images/matrimony/3.png",
+      "/assets/projects_Images/matrimony/4.png",
+      "/assets/projects_Images/matrimony/5.png",
+      "/assets/projects_Images/matrimony/6.png",
+      "/assets/projects_Images/matrimony/7.png"
+    ],
+    "note": "End-to-end development by me. GitHub repository is private due to client data."
+  },
+  {
+    "id": 7,
+    "title": "Darkroom Photography Website",
+    "shortDescription": "Portfolio website for a wedding and events photographer.",
+    "fullDescription": "This is a freelance portfolio website designed and developed for a photography studio. The site features a modern dark-themed layout with service sections, a dynamic image gallery, and a contact page. The UI is built with Tailwind CSS and React.js for a smooth user experience.",
+    "techStack": "React.js, Tailwind CSS",
+    "ghLink": "",
+    "demoLink": "",
+    "images": [
+      "/assets/projects_Images/darkroom/1.png",
+      "/assets/projects_Images/darkroom/2.png",
+      "/assets/projects_Images/darkroom/3.png"
+    ],
+    "note": "Built for my brother’s photography business. Repository is private."
+  }
+]

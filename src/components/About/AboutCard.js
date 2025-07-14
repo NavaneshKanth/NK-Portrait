@@ -8,34 +8,34 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Navaneshkanthna</span>
-            &nbsp;from <span className="purple">Tamil Nadu, India</span>.
-            <br />
-            I am a Frontend Web Developer passionate about building impactful digital experiences.
+            As a <span className="purple">Frontend Web Developer</span>, my journey is driven by a passion for transforming complex ideas into intuitive and engaging user experiences. Based out of <span className="purple">Tamil Nadu, India</span>, I thrive on crafting digital solutions that are not just functional but also delightful to interact with.
             <br />
             <br />
-            Apart from coding, here’s a little more about me:
+            I believe that great software is built on a foundation of clean code, thoughtful design, and a deep understanding of user needs. My commitment extends beyond development; it's about continuous learning and embracing new challenges to deliver impactful results.
+            <br />
+            <br />
+            When I'm not immersed in code, you might find me:
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Book Reading
+          <ul className="about-activity-list"> {/* Added a class for styling */}
+            <li className="about-activity-item">
+              <ImPointRight className="purple-icon" /> Diving into the pages of a good book, exploring new perspectives.
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Speaking out against untouchability and injustice
+            <li className="about-activity-item">
+              <ImPointRight className="purple-icon" /> Advocating for justice and challenging societal inequalities, particularly against untouchability.
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Admiring birds for their freedom and unity beyond borders
+            <li className="about-activity-item">
+              <ImPointRight className="purple-icon" /> Observing birds, captivated by their freedom and the inherent unity they display beyond borders.
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Exploring the beauty of nature, especially the Western Ghats
+            <li className="about-activity-item">
+              <ImPointRight className="purple-icon" /> Losing myself in the serene beauty of nature, especially the majestic Western Ghats.
             </li>
-            <li className="about-activity">
-              <ImPointRight /> Thinking deeply about space, galaxies, and the universe
+            <li className="about-activity-item">
+              <ImPointRight className="purple-icon" /> Pondering the vastness of space, the mysteries of galaxies, and the universe's grand design.
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to stay aware, stay curious, and stand for unity beyond divisions."
+          <p style={{ color: "rgb(155 126 172)", marginTop: "30px" }}> {/* Added margin-top */}
+            "My aim is to cultivate awareness, foster curiosity, and champion unity in a world often divided."
           </p>
           <footer className="blockquote-footer">Navaneshkanthna</footer>
         </blockquote>
